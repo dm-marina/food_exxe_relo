@@ -1,0 +1,169 @@
+ .meal{
+    @include flex-column;
+    min-width: 1024px;
+    .mini_header{
+        margin-bottom: $padding-xxl;
+    }
+    .meal_content{
+        margin-top: $margin-xl;
+        @include flex-row;
+        justify-content: space-around;
+
+        .img_box{
+            @include flex-column;
+            align-items: center;
+            .main_img{
+            background-image: url(../images/egg3.svg);
+            @include img;
+            width: $big-main-img-width;
+            height: $big-main-img-height;
+            }
+            .small_img_box{
+                width: 100%;
+                @include flex-row;
+                justify-content: space-between;
+
+                .mini_img{
+                    background-image: url(../images/egg3.svg);
+                    @include img;
+                    width: 30%;
+                    height: $small-main-img-height;
+                }
+            }
+        }
+        .box{
+            @include flex-column;
+            max-width: 310px;
+            align-self: stretch;
+            justify-content: space-between;
+
+            .meal_title, .meal_add{
+                color: $color-dark;
+                font-size: $text-size-xl;
+            }
+            .meal_title::after{
+                margin-top: $margin-m;
+                margin-bottom: $margin-m;
+            }
+            .meal_title::after, .meal_add::before{
+                content: "";
+                display: block;
+                width: 100%;
+                height: 1px;
+                background-color: $color-dark;
+            }
+            .meal_add::before{
+                margin-top: $margin-l;
+                margin-bottom: $margin-l;
+            }
+
+            .portion_inform{
+                @include flex-row;
+                align-items: center;
+                align-self: stretch;
+                justify-content: space-between; 
+                
+                .price{
+                    font-size: $text-size-xl;
+                    color: $color-dark;
+                    margin-right: $margin-xxxs;
+                }
+                .weight{
+                    color: $color-dark;
+                    opacity: 0.6;
+                    font-size: $text-size-xs;
+                }
+                .weight::before{
+                    content: "/";
+                    display: inline-block;
+                    margin-right: $margin-xxxs;
+                }
+        
+                .quantity{
+                    @include flex-row;
+                    justify-content: space-between;
+                    padding: $padding-s $padding-m $padding-s $padding-m;
+                    border: 1px solid rgba(51, 51, 51, 0.2);
+
+                    .quant{
+                        color: $color-dark;
+                        font-size: $text-size-m;
+                        margin-right: $margin-xxs;
+                        align-self: center;
+                    }
+                    .up_down{
+                        @include flex-column;
+                        .up{
+                            margin-bottom: $margin-xxxxs;
+                        }
+                        .up , .down{
+                            background: transparent;
+                            border: none;
+                            width: 11px;
+                            height: 15px;
+                            cursor: pointer;
+                        }
+                        .up::after, .down::after{
+                            @include content-img;
+                            display: inline-block;
+                            width: 11px;
+                            height: 9px;
+                        }
+                        .up::after{
+                            background-image: url(../images/up.svg);
+                        }
+                        .down::after{
+                            background-image: url(../images/down.svg);
+                        }
+                    }
+                }
+                .btn{
+                    background-color: $btn-color1;
+                    padding: $padding-s $padding-l $padding-s $padding-l;
+                }
+
+            }
+            .text{
+                margin-top: $margin-m;
+                font-size: $text-size-xs;
+                margin-bottom: $margin-s;
+            }
+            .addition{
+                @include flex-column;
+                margin-top: $margin-m;
+                align-self: stretch;
+                .card{
+                    @include flex-row;
+                    align-self: stretch;
+                    justify-content: space-between;
+                    margin-top: $margin-xs;
+
+                    .card_text_box{
+                        @include flex-column;
+
+                        .card_text{
+                            font-size: $text-size-xs;
+                            color: $color-dark;
+                            opacity: 0.5;
+                            margin-bottom: $margin-xxxs;
+                        }
+                        .card_price{
+                            font-size: $text-size-m;
+                            color: $color-dark;
+                        }
+                    }
+                    input[type="checkbox"]{
+                        width: $checkbox;
+                        height: $checkbox;
+                        border: 1px solid rgba(51, 51, 51, 0.2) !important;
+                        align-self: center;
+                        border-radius: 0;
+                    }
+                }
+                .card:nth-child(1){
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+}

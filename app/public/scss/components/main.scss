@@ -1,0 +1,172 @@
+main{
+    @include flex-column;
+
+    .page_content{
+
+        .main{
+            @include flex-column;
+            height: 100vh;
+            background-image: url(../images/main_bg.svg);
+            @include img;
+            background-size: cover;
+            width: 100%;
+
+            .mini_header{
+                margin-top: $margin-m;
+                margin-right: $margin-xxl;
+
+                .link{
+                    font-size: $text-size-xs;
+                    color: $color-light;
+                    @include no-link;
+                    margin-right: $margin-xl;
+                    align-self: center;
+                }
+                .btn{
+                    background-color: $btn-color1;
+                    color: $color-light;
+                    padding: $padding-xs $padding-m $padding-xs $padding-m;
+                    font-size: $text-size-xs;
+                }
+                    
+            }
+
+            .content{
+                @include flex-column;
+                height: 100vh;
+                justify-content: flex-end;
+                margin-bottom: 150px;
+                    
+
+                .title{
+                    text-align: left;
+                    font-size: $text-size-xxxl;
+                    color: $color-light;
+                }
+            }
+            // .modal{
+            //     display: none;
+            // }
+        }
+        }
+        .wrapper{
+            @include flex-column;
+            align-items: center;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 1276px;
+            .information{
+                @include flex-column;
+                justify-content: center;
+
+                .section{
+                    margin-top: $margin-xxxl;
+                    max-width: 1076px;
+                    
+
+                    .link_about{
+                        @include no-link;
+                        color: $color-dark;
+                        font-size: $text-size-m;
+                    }
+                    .divider{
+                        position: relative;
+                    }
+                    .divider::after{  
+                        background-image: url(../images/divider.svg);
+                        @include content-img;  
+                        width: $mini-divider-width;
+                        height: $divider-height;
+                        margin-left: $margin-m;
+                        position: absolute;
+                        top: 12px;
+                    }
+
+                    .section_content{
+                        @include flex-row;
+                        margin-top: $margin-xlx;
+                        align-self: center;
+                        justify-content: space-between;
+
+                        .title_text{
+                            font-size: $text-size-xxxxl;
+                        }
+                        .text{
+                            font-size: $text-size-s;
+                            max-width: 530px;
+                        }
+                    }
+                    .food_menu{
+                        margin-top: $margin-xlx;
+                        @include flex-row;
+                        justify-content: space-between;
+
+                        .border{
+                            width: 416px;
+                            height: 240px;
+                            border:1px solid rgba(51, 51, 51, 0.2);
+                            .menu_name{
+                                @include no-link;
+                                color: $color-dark;
+                                font-size: $text-size-m;          
+                            }
+                            .menu_name::before{
+                                @include content-img;
+                                width: 336px;
+                                height: 240px;
+                                display: inline-block;
+                                margin: $padding-xl $padding-xl 0 $padding-xl;  
+        
+                            }
+                            .divider{
+                                position: relative;
+                            }
+                            .divider::after{
+                                background-image: url(../images/divider.svg);
+                                @include content-img;  
+                                width: $mini-divider-width;
+                                height: $divider-height;
+                                display: inline-block;
+                                margin-top: 23px;
+                            }
+                        }
+                        .border:nth-child(1){
+                            .menu_name::before{
+                                background-image: url(../images/menu.svg); 
+                            }
+                        }
+                        .border:nth-child(2){
+                            .menu_name::before{
+                                background-image: url(../images/wine.svg);
+                            }
+                        }
+                        
+                    }
+                    
+                    .buttons{
+                        @include flex-row;
+                        margin-top: $margin-xl;
+                        align-items: flex-end;
+                        justify-content: center;
+
+                        .btn{
+                            font-size: $text-size-m;
+                            padding: $padding-s $padding-l $padding-s $padding-l;
+                        }
+                        .btn:nth-child(1){
+                            margin-right: $margin-m;
+                            color: $color-light;
+                            background-color: $btn-color1;
+                        }
+                        .btn:nth-child(2){
+                            color: $color-dark;
+                            background-color: transparent;
+                            border: 1px solid rgba(51, 51, 51, 0.2);
+                        }
+                    }
+
+                }
+            }
+    }
+}    
+        

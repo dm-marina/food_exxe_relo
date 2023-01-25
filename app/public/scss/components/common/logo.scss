@@ -1,0 +1,12 @@
+.logo{
+    position: relative;
+    a{
+        width: $logo-width;
+        height: $logo-height;
+        position: absolute;
+    }
+    .logo_img{
+        width: $logo-width;
+        height: $logo-height;
+    }
+}

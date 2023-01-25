@@ -1,0 +1,55 @@
+.page_content{
+    @include flex-row;
+
+    .header_left{
+        @include flex-column;
+        align-self: flex-start;
+        background-color: $color-dark;
+        height: 100vh;
+        max-width: 120px;
+        // position: absolute;
+
+        .top{
+            @include flex-column;
+            vertical-align: top;
+            margin: 30px 20px 0px 20px;
+
+            .logo{
+                margin-bottom: $margin-m;
+            }
+            .show-menu{
+                display: inline-flex;
+            }
+            .burger_btn{
+                width: $burger-width;
+                height: $burger-height;
+                background: transparent;
+                border: none;
+                @include img;
+                cursor: pointer;
+                position: relative;
+            }
+            .burger_btn::after{
+                position: absolute;
+                @include content-img;
+                background-image: url(../images/burger.svg);
+                width: $burger-width;
+                height: $burger-height;
+            }
+        }
+        .bottom{
+            @include flex-column;
+            margin-bottom: $margin-l;
+            align-items: center;
+            height: 100vh;
+            justify-content: flex-end;
+            .youtube{
+                margin-bottom: $margin-l;
+            }
+            .vk{
+                margin-bottom: $margin-l;
+            }
+
+        }
+    }
+}

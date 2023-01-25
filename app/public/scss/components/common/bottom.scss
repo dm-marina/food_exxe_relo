@@ -1,0 +1,17 @@
+.bottom{
+    .youtube, .vk, .telegram{
+        @include img;
+        width: 33px;
+        height: 23px;
+
+    }
+    .youtube{
+        background-image: url(../images/youtube.svg);
+    }
+    .vk{
+        background-image: url(../images/vk.svg);
+    }
+    .telegram{
+        background-image: url(../images/telegram.svg);
+    }
+}

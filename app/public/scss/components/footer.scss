@@ -1,0 +1,42 @@
+.footer{
+    @include flex-row;
+    background: $color-dark;
+    justify-content: space-around;
+    align-self: center;
+    align-items: center;
+    padding-top: $padding-l;
+    padding-bottom: $padding-xl;
+
+    .text{
+        font-size: $text-size-xs;
+        color: $color-light;
+    }
+    .payment{
+        @include flex-row;
+        justify-content: space-between;
+
+        .visa, .mastercard{
+            position: relative;
+            width: 40px;
+            height: 27px;
+        }
+        .visa{
+            margin-right: $margin-m;
+        }
+        .mastercard{
+            border: 1px solid $color-light;
+        }
+        .visa::after, .mastercard::after{
+            @include content-img;
+            width: 40px;
+            height: 27px;
+            position: absolute;
+        }
+        .visa::after{
+            background-image: url(../images/visa.svg);
+        }
+        .mastercard::after{
+            background-image: url(../images/mastercard.svg);
+        }
+    }
+}

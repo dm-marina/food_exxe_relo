@@ -1,0 +1,36 @@
+.mini_header{
+    @include flex-row;
+    align-self: flex-end;
+    justify-content: space-around;
+    
+    .link{
+        @include no-link;
+        text-transform: capitalize;
+        color: $color-dark;
+        font-size: $text-size-xs;
+        align-self: center;
+        margin-right: $margin-m;
+    }
+    .link:last-child{
+        margin-right: 0;
+    }
+    .user, .basket{
+        position: relative;
+        width: 26px;
+        height: 20px;
+    }
+    .user::after{
+        background-image: url(../images/user.svg);
+        width: 18px;
+        height: 18px;
+    }
+    .basket::after{
+        background-image: url(../images/basket.svg);
+        width: 26px;
+        height: 20px;
+    }
+    .user::after, .basket::after{
+        @include content-img;
+        position: absolute;
+    }
+}

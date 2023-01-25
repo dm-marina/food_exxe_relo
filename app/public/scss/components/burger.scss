@@ -1,0 +1,68 @@
+   .top{     
+    .burger{
+        position: absolute;
+        display: none;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        flex-direction: column;
+        align-items: center;
+        background: $color-dark;
+        height: 100vh;
+        width: 100%;
+
+        .top{
+            @include flex-column;
+            justify-content: flex-start;
+            margin-top: $margin-m;
+
+            .logo{
+                margin-bottom: $margin-m;
+            }
+            .close{
+                align-self: center;
+            }
+            .close::after{
+                @include content-img;
+                background-image: url(../images/close.svg);
+                width: 20px;
+                height: 20px;
+                position: absolute;
+                bottom: 10px;
+                left: 10px;
+            }
+
+        }
+        .middle{
+            @include flex-column;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+
+            .link{
+                @include no-link;
+                margin-bottom: 60px;
+                text-transform: capitalize;
+                font-size: $text-size-xxl;
+                color: $color-light;
+            }
+            .btn{
+                font-size: $text-size-l;
+                background: $btn-color1;
+                padding: $padding-m $padding-xl $padding-m $padding-xl;
+            }
+        }
+        .bottom{
+            @include flex-row;
+            justify-content: space-around;
+            align-items: flex-end;
+            align-self: stretch;
+
+            .youtube, .vk{
+                margin-bottom: 0;
+            }
+        }
+
+    }
+   }
