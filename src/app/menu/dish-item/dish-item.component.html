@@ -1,0 +1,34 @@
+<div class="meal_content">
+    <div class="img_box">
+        <div class="main_img">
+            <img [src]="dish.imgPath" alt="{{dish.name}}">
+        </div>
+        <div class="small_img_box">
+            <div class="mini_img"></div>
+            <div class="mini_img"></div>
+            <div class="mini_img"></div>
+        </div>
+    </div>
+    <div class="box">
+        <h2 class="meal_title">{{dish.name}}</h2>
+        <div class="portion_inform">
+            <h4 class="price">{{dish.price}}грн</h4>
+            <p class="weight">{{dish.weight}} грамм</p>
+        </div>
+        <p class="text">Количество порций:</p>
+        <div class="portion_inform">
+            <app-counter></app-counter>
+            <button class="btn" type="button" (click)="onAddToBasket()">В корзину</button>
+        </div>
+        <h3 class="meal_add">Сделать еще вкуснее</h3>
+        <div class="addition">
+            <div class="card" *ngFor="let addition of dish.additions">
+                <div class="card_text_box">
+                    <p class="card_text">{{addition.addName}}</p>
+                    <p class="card_price">{{addition.addPrice}}</p>
+                </div>
+                <input type="checkbox">
+            </div>
+        </div>
+    </div>
+</div>

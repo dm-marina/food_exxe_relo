@@ -1,0 +1,50 @@
+@media(min-width:320px){
+    .close{
+        align-self: flex-end;
+        background: transparent;
+        border: none;
+    }
+    .close::after{
+        content:"";
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: url('/assets/images/close.svg');
+        width: 20px;
+        height: 20px;
+        display: block;
+    }
+    .column-container{
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        .inf{
+            font-size: 16px;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+        h3{
+            font-size: 24px;
+            color: #fff;
+        }
+        .user-data{
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            .name{
+                font-size: 20px;
+                color: #fff;
+                margin-bottom: 15px;
+            }
+        }
+        .btn{
+            text-transform:capitalize;
+            background-color: #B59571;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            margin-bottom: 15px;
+        }
+    }
+}

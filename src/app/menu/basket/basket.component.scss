@@ -1,0 +1,53 @@
+@media(min-width:320px){
+    .modal{
+        display: flex;
+        flex-direction: column;
+        padding: 30px 60px;
+        align-items: center;
+        max-width: 416px;
+
+        .close{
+            align-self: flex-end;
+            background: transparent;
+            border: none;
+        }
+        .close::after{
+            content:"";
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-image: url('/assets/images/close.svg');
+            width: 20px;
+            height: 20px;
+            display: block;
+        }
+        .logo{
+            margin-bottom: 40px;
+            align-self: center;
+        }
+        
+
+            app-basket-item{
+                width: 100%;
+                margin-bottom: 30px;
+                border: 1px solid #B59571;
+                padding: 20px;
+            }
+            h4{
+                text-align: center;
+                color: #fff;
+                font-size: 24px;
+                margin-bottom: 15px;
+            }
+            .btn{
+                text-transform:uppercase;
+                background-color: #B59571;
+                color: #fff;
+                padding: 20px 30px;
+                font-size: 20px;
+                border: none;
+            }
+        
+
+    }
+}

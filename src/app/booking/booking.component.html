@@ -1,0 +1,35 @@
+<form class="modal" #bookingForm="ngForm" (ngSubmit)="onSubmit(bookingForm)">
+    <button class="close" id="close-modal" type="button" (click)="onClose()"></button>
+    <div class="logo">
+        <a (click)="onMain()"></a>
+        <img class="logo_img" src="assets/images/logo.svg">
+    </div>
+    <p class="main-text">Забронировать столик</p>
+    <input type="text" 
+        placeholder="Имя"
+        required
+        ngModel
+        name="name">
+    <input type="tel" 
+        placeholder="Телефон"
+        name="tel"
+        required
+        ngModel>
+    <div class="input_container">
+        <input type="number"
+         placeholder="Гостей"
+         name="guests"
+         required
+         ngModel>
+        <input type="time" 
+            placeholder="Время"
+            name="time"
+            required
+            ngModel>
+    </div>
+    <button class="btn" 
+    type="submit"
+    [disabled]="!bookingForm.valid">
+        Забронировать
+    </button>
+</form>

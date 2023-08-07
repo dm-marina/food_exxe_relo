@@ -1,0 +1,60 @@
+@media(min-width:320px){
+    .footer{
+        display: flex;
+        flex-direction: column;
+        background: #333;
+        justify-content: space-around;
+        align-items: center;
+        padding-top: 30px;
+        padding-bottom: 40px;
+    
+        .text{
+            font-size: 16px;
+            color: #fff;
+        }
+        .payment{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+    
+            .visa, .mastercard{
+                position: relative;
+                width: 40px;
+                height: 27px;
+            }
+            .visa{
+                margin-right: 30px;
+                margin-bottom: 10px;
+            }
+            .mastercard{
+                border: 1px solid #fff;
+            }
+            .visa::after, .mastercard::after{
+                content:"";
+                background-position: center;
+                background-size: contain;
+                background-repeat: no-repeat;
+                width: 40px;
+                height: 27px;
+                position: absolute;
+            }
+            .visa::after{
+                background-image: url('/assets/images/visa.svg');
+            }
+            .mastercard::after{
+                background-image: url('/assets/images/mastercard.svg');
+            }
+        }
+    }
+}
+@media(min-width:768px){
+    .footer{
+        flex-direction: row;
+        .payment{
+            flex-direction: row;
+            .visa{
+                margin-bottom: 0;
+            }
+        }
+    }
+}

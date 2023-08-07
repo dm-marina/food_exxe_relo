@@ -1,0 +1,11 @@
+<div class="item">
+    <span class="img">
+        <img [src]="dish.imgPath" alt="{{dish.name}}">
+    </span>
+        <a [routerLink]="[index]" 
+        class="name"> {{dish.name}}</a>
+        <div class="card-container">
+            <h4 class="price">{{dish.price}}</h4>
+            <button class="btn" type="button" (click)="onAddToBasket()">В корзину</button>
+        </div>  
+</div>

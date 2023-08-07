@@ -1,0 +1,13 @@
+.alert-box{
+    padding: 20px 30px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid red;
+    margin-bottom: 20px;
+
+    .alert{
+        color: red;
+        font-size: 20px;
+    }
+}

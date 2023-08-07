@@ -1,0 +1,196 @@
+@media(min-width:320px){
+    .contacts{
+        padding: 0px 20px;
+        margin-top: 150px;
+        display: flex;
+        flex-direction: column;
+        .link_about{
+            text-decoration: none;
+            text-transform: uppercase;
+            color: #333;
+            font-size: 20px;
+        }
+        .divider{
+            position: relative;
+        }
+        .divider::after{  
+            background-image: url('/assets/images/divider.svg');
+            content:"";
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;  
+            width: 60px;
+            height: 3px;
+            margin-left: 30px;
+            position: absolute;
+            top: 12px;
+        }
+    
+        .section_content{
+            display: flex;
+            flex-direction: column;
+            margin-top: 80px;
+            align-self: center;
+            justify-content: center;
+            app-booking{
+                position: absolute;
+                background-color: #333;
+                display: flex;
+                flex-direction: column;
+                z-index: 80;
+            }
+            .timing{
+                align-self: center;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                justify-content: space-between;
+    
+                .timing_inform{
+                    width: 50%;
+                    margin-bottom: 50px;
+                    display: flex;
+                    flex-direction: column;
+    
+                    .main_text{
+                        font-size: 32px;
+                        color: #B59571;
+                        margin-bottom: 5px;
+                    }
+                    .text{
+                        font-size: 16px;
+                    }
+    
+                }
+                .timing_inform:nth-child(3), .timing_inform:nth-child(4){
+                    margin-bottom: 0;
+                }
+            }
+            .address{
+                display: flex;
+                overflow: hidden;
+                .address_img{
+                    .address_inform{
+                        background: #5B5B5B;
+                        padding: 40px;
+                        display: flex;
+                        flex-direction: column;
+                        align-self: center;
+    
+                        .contacts-inf{
+                            text-transform: capitalize;
+                            font-size: 24px;
+                            color: #fff;
+                        }
+                        .contacts-inf:nth-child(1){
+                            margin-bottom: 20px;
+                        }
+                        .contacts-inf:nth-child(2){
+                            text-decoration: none;
+                            text-transform: uppercase;
+                        }
+                        .vector_addr::before, .vector_tel::before{
+                            display: inline-block;
+                            margin-right: 20px;
+                            content:"";
+                            background-position: center;
+                            background-size: contain;
+                            background-repeat: no-repeat;
+                            width: 15px;
+                            height: 15px;
+                        }
+                        .vector_addr::before{
+                            background-image: url('/assets/images/location.svg');
+                        }
+                        .vector_tel::before{
+                            background-image: url('/assets/images/tel.svg');
+                        }
+                        .main_text{
+                            font-size: 20px;
+                            color: #fff;
+                            margin-bottom: 15px;
+                            margin-top: 25px;
+                        }
+                        .text{
+                            font-size: 18px;
+                            color: #fff;
+                            margin-bottom: 15px;
+                        }
+                        .text:nth-child(2){
+                            margin-bottom: 25px;
+                        }
+                        .buttons{
+                            justify-content: flex-start;
+                            margin-top: 0;
+                            .btn{
+                                padding: 10px 30px;
+                                font-size: 16px;
+                                color: #fff;
+                            }
+                            .border:nth-child(1){
+                                margin-right: 0;
+                            }
+                            .btn:nth-child(1){
+                                background-color: #B59571;
+                                border: none;
+                            }
+                            .btn:nth-child(2){
+                                background: transparent;
+                                border:1px solid #fff;
+                            }
+                        }
+    
+                    }
+                }
+    
+            }
+        }
+    
+    }
+}
+@media(min-width:768px){
+    .contacts{
+        padding: 0;
+        .section_content{
+            .timing{
+                flex-direction: row;
+                .timing_inform{
+                    .main_text{
+                        font-size: 64px;
+                    }
+                }
+            }
+            .address{
+                align-self: center;
+                .address_img{
+                    background-image: url('/assets/images/map.svg');
+                    background-position: center;
+                    background-size: contain;
+                    background-repeat: no-repeat; 
+                    background-size: cover;
+                    width: 746px;
+                    height: 450px;
+                    display: flex;
+                    position: relative;
+                    left:110px;   
+
+                    .address_inform{
+                        position: absolute;
+                        left: -110px;
+
+                        .contacts-inf{
+                            font-size: 32px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media(min-width:1024px){
+    .contacts{
+        .section_content{
+            flex-direction: row;
+        }
+    }
+}

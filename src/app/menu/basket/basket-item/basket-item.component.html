@@ -1,0 +1,17 @@
+<a class="basket-item">
+    <span>
+        <img [src]="dish.imgPath" alt="{{dish.name}}">
+    </span>
+    <div class="basket-item-content">
+        <h4 class="name">{{dish.name}}</h4>
+        <h4 class="price">{{dish.price}} грн / порция</h4>
+        <div class="row-container">
+            <p>Количество порций: </p>
+            <app-counter></app-counter>
+        </div>
+        <div class="row-container">
+            <button class="btn" type="button">Купить</button>
+            <button class="btn" type="button" (click)="onDelete()">Удалить</button>
+        </div>
+    </div>
+</a>

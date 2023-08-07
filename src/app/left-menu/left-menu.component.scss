@@ -1,0 +1,72 @@
+@import './burger-menu/burger-menu.component.scss';
+    .top{
+        display: flex;
+        flex-direction: column;
+        vertical-align: top;
+        margin: 30px 20px 0px 20px;
+        .logo{
+            margin-bottom: 30px;
+                position: relative;
+            a{
+                width:80px;
+                height:46px;
+                position: absolute;
+            }
+            .logo_img{
+                width:80px;
+                height:46px;
+            }
+        }
+        .show-menu{
+            display: inline-flex;
+        }
+        .burger_btn{
+            width: 33px;
+            height: 23px;
+            background: transparent;
+            border: none;
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat; 
+            cursor: pointer;
+            position: relative;
+        }
+        .burger_btn::after{
+            position: absolute;
+            content:"";
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-image: url(../../assets/images/burger.svg);
+            width: 33px;
+            height: 23px;
+        }
+    }
+    .bottom{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 40px;
+        align-items: center;
+        height: 100vh;
+        justify-content: flex-end;
+        .youtube, .vk, .telegram{
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat; 
+            width: 33px;
+            height: 23px;
+    
+        }
+        .youtube{
+            background-image: url(../../assets/images/youtube.svg);
+            margin-bottom: 40px;
+        }
+        .vk{
+            background-image: url(../../assets/images/vk.svg);
+            margin-bottom: 40px;
+        }
+        .telegram{
+            background-image: url(../../assets/images/telegram.svg);
+        }
+    }
+

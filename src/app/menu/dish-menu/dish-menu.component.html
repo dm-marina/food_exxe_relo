@@ -1,0 +1,6 @@
+<div class="dish_menu" *ngFor="let dishMenu of dishesMenu;">
+    <div routerLinkActive="active">
+        <a [routerLink]="[dishMenu.name]"
+        class="dish-type">{{dishMenu.name}}</a>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+<div class="item">
+    <span class="img">
+        <img [src]="drink.imgPath" alt="{{drink.name}}">
+    </span>
+        <a
+        class="name"> {{drink.name}}</a>
+        <p class="name">{{drink.type}}</p>
+        <div class="card-container">
+            <h4 class="price">{{drink.price}}</h4>
+            <button class="btn" type="button" (click)="onAddToBasket()">В корзину</button>
+        </div>  
+</div>

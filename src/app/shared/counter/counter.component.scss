@@ -1,0 +1,43 @@
+.quantity{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px 20px;
+    border: 1px solid rgba(51, 51, 51, 0.2);
+
+    .quant{
+        color: #333;
+        font-size: 20px;
+        margin-right: 15px;
+        align-self: center;
+    }
+    .up_down{
+        display: flex;
+        flex-direction: column;
+        .up{
+            margin-bottom: 5px;
+        }
+        .up , .down{
+            background: transparent;
+            border: none;
+            width: 11px;
+            height: 15px;
+            cursor: pointer;
+        }
+        .up::after, .down::after{
+            content:"";
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            display: inline-block;
+            width: 11px;
+            height: 9px;
+        }
+        .up::after{
+            background-image: url('/assets/images/up.svg');
+        }
+        .down::after{
+            background-image: url('/assets/images/down.svg');
+        }
+    }
+}

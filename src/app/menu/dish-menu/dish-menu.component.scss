@@ -1,0 +1,37 @@
+@media(min-width:320px){
+    .dish_menu{
+        margin-bottom: 10px;
+
+        .dish-type{
+            text-decoration: none;
+            text-transform: uppercase;
+            text-transform: none;
+            background:none;
+            border: none;
+            color: #333;
+            font-size: 16px;
+        }
+        .active{
+            display: block;
+        }
+        .active::after{
+            content: '';
+            background-position: center;
+            display: block;
+            margin-top: 5px;
+            height: 3px;
+            background-image: url('/assets/images/divider.svg');
+        }
+    }
+}
+@media(min-width:768px) {
+    .dish_menu{
+        width: 15%;
+    }
+}
+@media(min-width:1024px){
+    .dish_menu{
+        width: auto;
+        margin-bottom: 0;
+    }
+}

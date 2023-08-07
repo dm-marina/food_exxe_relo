@@ -1,0 +1,37 @@
+@import './main/main.component.scss';
+@import './contacts/contacts.component.scss';
+@import './footer/footer.component.scss';
+@import './header/header.component.scss';
+@import './menu/menu.component.scss';
+@import './booking/booking.component.scss';
+@import './menu/basket/basket.component.scss';
+@import './auth/auth.component.scss';
+@import './auth/account/account.component.scss';
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+app-dish{
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+
+    app-menu{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    app-main{
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        align-self: center;}
+}

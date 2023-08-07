@@ -1,0 +1,130 @@
+@import './dish-menu/dish-menu.component.scss';
+@import './dish-menu/dish-menu.component.scss';
+@import './menu-item-list/menu-item-list.component.scss';
+@import './dish-item/dish-item.component.scss';
+@media(min-width:320px){
+    .row{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        app-left-menu{
+            display: none;
+        }
+        .page-content{
+            display: flex;
+            flex-direction: column;
+            width: 85%;
+            app-header{
+                margin-bottom: 60px;
+                display: flex;
+                justify-content: center;
+                app-basket{
+                    position: absolute;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    max-width: 416px;
+                    align-items: stretch;
+                    background-color: #333;  
+                    z-index: 50;
+                }
+                app-auth, app-account{
+                    position: absolute;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    max-width: 416px;
+                    align-items: stretch;
+                    background-color: #333;  
+                    z-index: 50; 
+                    min-height: 300px;
+                    min-width: 300px;
+                    padding: 20px 30px;
+                }
+                
+            }
+            app-dish-menu{
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                align-self: center;
+                justify-content: space-between;
+            }
+            app-menu-item-list, app-drinks{
+                margin-top: 50px;
+                display: flex;
+                align-self: center;
+                flex-direction: column;
+                padding-left: 20px;
+                app-menu-item, app-drink-item{
+                    align-self: center;
+                    width: 210px;
+                }
+            }
+        }
+    }
+    app-contacts{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-self: center;
+    }
+}
+@media(min-width:768px){
+    .row{
+        app-booking{
+            position: absolute;
+            z-index: 50;
+            background-color: #333;
+        }
+        app-left-menu{
+            display: flex;
+            flex-direction: column;
+            align-self: flex-start;
+            background-color: #333;
+            height: 100vh;
+            max-width: 120px;
+        }
+        .page-content{
+            app-header{
+                justify-content: flex-end;
+            }
+            app-dish-menu{
+                flex-direction: row;
+                justify-content: space-around;
+                width: 100%;
+            }
+           app-menu-item-list, app-drinks{
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-self: center;
+            padding-left: 0;
+                app-menu-item, app-drink-item{
+                    width: 23%;
+                }
+           }
+           app-dish-item{
+            align-self: center;
+            justify-content: space-around;
+           }
+        }
+    }
+}
+@media(min-width:1024px){
+    .row{
+        .page-content{
+            app-header{
+                justify-content: flex-end;
+                max-width: 1250px;
+            }
+            app-dish-menu{
+                flex-direction: row;
+            }
+            .cards{
+                max-width: 1250px;
+                align-self: center;
+            }
+        }
+    }
+}

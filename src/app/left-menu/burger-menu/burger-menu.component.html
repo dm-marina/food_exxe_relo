@@ -1,0 +1,21 @@
+<div class="burger">
+    <div class="top">
+        <div class="logo" >
+            <a (click)="onMain()"></a>
+            <img class="logo-img" src="assets/images/logo.svg" width="80px" height="46px">
+        </div>
+        <button class="close" id="close-menu" type="button" (click)="closeBurger()"></button>
+    </div>
+    <div class="middle">
+        <a routerLink='/menu/Завтраки' class="link">Меню</a>
+        <a href="#delivery" class="link">Доставка</a>
+        <a  class="link">Оплата</a>
+        <button class="btn" type="button" (click)="openBooking(booking)">Бронь столика</button>
+        <ng-template appPlaceholder></ng-template>
+    </div>
+    <div class="bottom">
+        <a class="vectors youtube"></a>
+        <a  class="vectors vk"></a>
+        <a  class="vectors telegram"></a>
+    </div>
+</div>

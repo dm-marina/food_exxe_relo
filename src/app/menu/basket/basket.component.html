@@ -1,0 +1,13 @@
+<div class="modal">
+    <button class="close" type="button" (click)="onClose()"></button>
+    <div class="logo">
+        <a href=""></a>
+        <img class="logo_img" src="assets/images/logo.svg">
+    </div>
+    <app-basket-item *ngFor="let dishEl of basket"
+    [dish]="dishEl"></app-basket-item>
+    <h4>Общая стоимость: {{cost}}</h4>
+    <button type="button" class="btn">Купить все</button>
+</div>
+
+        

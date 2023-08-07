@@ -1,0 +1,75 @@
+@media(min-width:320px){
+    .promo-content{
+        background-image: url('/assets/images/main_bg.svg');
+        background-position: center;
+        background-repeat: no-repeat; 
+        background-size: cover;
+        width: 100%;
+
+        .mini_header{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 30px;
+
+            .link{
+                font-size: 14px;
+                color: #fff;
+                text-decoration: none;
+                text-transform: uppercase;
+                align-self: flex-end;
+                margin-bottom: 10px;
+            }
+            .btn{
+                text-transform:capitalize;
+                background-color: #B59571;
+                color: #fff;
+                padding: 10px 20px;
+                font-size: 16px;
+                border: none;
+            }
+                
+        }
+        .content{
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+
+            .title{
+                text-align: left;
+                font-size: 42px;
+                color: #fff;
+                align-self: center;
+            }
+        }
+    }
+    app-left-menu{
+        display: none;
+    }
+}
+@media(min-width:768px){
+    app-left-menu{
+        display: flex;
+        flex-direction: column;
+        align-self: flex-start;
+        background-color: #333;
+        height: 100vh;
+        max-width: 120px;
+    }
+    .mini_header{
+        flex-wrap: nowrap;
+        margin-left: 100px;
+        .link{
+            margin-bottom: 0;
+            font-size: 16px;
+        }
+        
+    }
+    .content{
+        .title{
+            font-size: 54px;
+        }
+    }
+}

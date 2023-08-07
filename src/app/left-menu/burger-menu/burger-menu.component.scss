@@ -1,0 +1,81 @@
+@media(min-width:320px){
+    .burger{
+        display: none;
+    }
+}
+@media(min-width:768px){
+    .burger{
+        z-index: 20;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: #333;
+        height: 100vh;
+        width: 100%;
+
+        .top{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            margin-top: 30px;
+        
+            .logo{
+                margin-bottom: 30px;
+            }
+            .close{
+                align-self: center;
+                background-color: transparent;
+                border: none;
+            }
+            .close::after{
+                content:"";
+                display: block;
+                background-position: center;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-image: url('/assets/images/close.svg');
+                width: 20px;
+                height: 20px;
+            }
+        }
+        .middle{
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        
+            .link{
+                text-decoration: none;
+                text-transform: uppercase;
+                margin-bottom: 60px;
+                text-transform: capitalize;
+                font-size: 48px;
+                color: #fff;
+            }
+            .btn{
+                font-size: 24px;
+                border: none;
+                background: #B59571;
+                padding: 20px 40px;
+                color: #fff;
+            }
+        }
+        .bottom{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: flex-end;
+            align-self: stretch;
+        
+            .youtube, .vk{
+                margin-bottom: 0;
+            }
+        }
+    }
+   
+    
+}
